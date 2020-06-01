@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+composer install --no-dev
+php artisan migrate --force
+php artisan db:seed --force
+
+while inotifywait -e close_write myfile.py;
+do
+  composer install --no-dev
+  php artisan migrate --force
+  php artisan db:seed --force
+done

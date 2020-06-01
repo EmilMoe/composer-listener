@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+cd ${DIR}
+
 composer install --no-dev
 php artisan migrate --force
 php artisan db:seed --force

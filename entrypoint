@@ -5,7 +5,7 @@ composer install --no-dev
 php artisan migrate --force
 php artisan db:seed --force
 
-while inotifywait -e close_write myfile.py;
+while inotifywait -e close_write composer.json;
 do
   composer install --no-dev
   php artisan migrate --force

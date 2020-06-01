@@ -18,7 +18,6 @@ RUN { \
         echo "php artisan migrate --force"; \
         echo "php artisan db:seed --force"; \
         echo "done"; \
-        echo "exec apache2ctl -DFOREGROUND \"\$@\""; \
     } > /usr/local/bin/entrypoint \
     && chmod a+rx /usr/local/bin/entrypoint \
     && apt-get -yq clean autoclean && apt-get -yq autoremove \

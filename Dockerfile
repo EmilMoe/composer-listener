@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Copenhagen
 
 RUN apt-get update && apt-get upgrade -yq
-RUN apt-get install inotify-tools composer php-cli php-xml -yq
+RUN apt-get install inotify-tools composer php-cli php-xml php-curl php-bcmath php-bz2 php-mbstring php-zip php-intl -yq
 RUN mkdir -p /var/www/html
 RUN { \
         echo "#!/usr/bin/env bash"; \

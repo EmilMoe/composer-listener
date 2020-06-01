@@ -8,6 +8,4 @@ RUN apt-get install inotify-tools composer php-cli -yq
 
 COPY entrypoint /usr/local/bin/entrypoint
 
-WORKDIR ${DIR}
-
 ENTRYPOINT ["entrypoint"]
